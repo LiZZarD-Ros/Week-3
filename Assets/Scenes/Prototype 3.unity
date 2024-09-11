@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f147a01ef442b2345a3546109476c690, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.27
+      value: 2.08
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f147a01ef442b2345a3546109476c690, type: 3}
       propertyPath: m_LocalPosition.y
@@ -430,6 +430,8 @@ GameObject:
   - component: {fileID: 835818921}
   - component: {fileID: 835818920}
   - component: {fileID: 835818922}
+  - component: {fileID: 835818924}
+  - component: {fileID: 835818923}
   m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
@@ -516,6 +518,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51074b9a93a44c44d8df68f6867fb462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &835818923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835818919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 112.79999, y: 18.836718, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &835818924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835818919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a57a6fd873eca458ccfb5e98b9a45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1036315977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f147a01ef442b2345a3546109476c690, type: 3}
@@ -533,9 +568,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e906ed1a498d4b9a241e4bc7178e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 15
-  gravityModifier: 2
+  jumpForce: 700
+  gravityModifier: 1.5
   isOnGround: 1
+  gameOver: 0
 --- !u!65 &1036315979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -565,7 +601,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036315977}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 60
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -598,7 +634,7 @@ GameObject:
   - component: {fileID: 2014335012}
   m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
